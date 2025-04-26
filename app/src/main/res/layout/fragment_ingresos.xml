@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <LinearLayout
+        android:id="@+id/layoutPrincipalIngresos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp"
+        android:padding="24dp"
         android:gravity="center_horizontal">
 
         <TextView
@@ -16,29 +16,166 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Registrar Ingreso"
-            android:textSize="24sp"
+            android:textSize="26sp"
+            android:textStyle="bold"
             android:layout_marginBottom="24dp" />
 
-        <EditText
-            android:id="@+id/editDescripcionIngreso"
+        <!-- Campo Descripción -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Descripción" />
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
 
-        <EditText
-            android:id="@+id/editMontoIngreso"
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/decription"
+                android:layout_marginEnd="8dp"/>
+
+            <EditText
+                android:id="@+id/editDescripcionIngreso"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Descripción"
+                android:background="@android:drawable/edit_text"
+                android:padding="12dp"/>
+        </LinearLayout>
+
+        <!-- Campo Monto -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Monto"
-            android:inputType="numberDecimal"
-            android:layout_marginTop="16dp" />
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
 
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/cash"
+                android:layout_marginEnd="8dp"/>
+
+            <EditText
+                android:id="@+id/editMontoIngreso"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Monto"
+                android:inputType="numberDecimal"
+                android:background="@android:drawable/edit_text"
+                android:padding="12dp"/>
+        </LinearLayout>
+
+        <!-- Botón Más detalles -->
+        <Button
+            android:id="@+id/btnToggleDetallesIngreso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Más detalles ▼"
+            android:backgroundTint="@android:color/holo_purple"
+            android:textColor="@android:color/white"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Layout oculto de Más detalles -->
+        <LinearLayout
+            android:id="@+id/layoutDetallesIngreso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <!-- Campo Fecha -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/date"
+                    android:layout_marginEnd="8dp"/>
+
+                <EditText
+                    android:id="@+id/editFechaIngreso"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Fecha (DD/MM/AAAA)"
+                    android:background="@android:drawable/edit_text"
+                    android:padding="12dp"/>
+            </LinearLayout>
+
+            <!-- Campo Lugar -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/pin"
+                    android:layout_marginEnd="8dp"/>
+
+                <EditText
+                    android:id="@+id/editLugarIngreso"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Lugar"
+                    android:background="@android:drawable/edit_text"
+                    android:padding="12dp"/>
+            </LinearLayout>
+
+            <!-- Spinner Método de pago -->
+            <Spinner
+                android:id="@+id/spinnerMetodoPagoIngreso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"/>
+        </LinearLayout>
+
+        <!-- Botón Guardar Ingreso -->
         <Button
             android:id="@+id/btnGuardarIngreso"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Guardar Ingreso"
-            android:layout_marginTop="24dp" />
+            android:drawableStart="@drawable/save"
+            android:drawablePadding="8dp"
+            android:backgroundTint="@android:color/holo_purple"
+            android:textColor="@android:color/white"
+            android:padding="12dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"/>
+
+        <!-- Resumen -->
+        <TextView
+            android:id="@+id/textResumenIngresos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ingresos Registrados: 0"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"
+            android:textColor="@android:color/black"/>
+
+        <!-- Lista de ingresos -->
+        <LinearLayout
+            android:id="@+id/listaIngresos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
 
     </LinearLayout>
 </ScrollView>

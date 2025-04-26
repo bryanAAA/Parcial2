@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -9,43 +10,49 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center_horizontal"
-        android:padding="16dp">
+        android:padding="24dp">
 
         <TextView
             android:id="@+id/textViewHome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Resumen General"
-            android:textSize="24sp"
-            android:layout_marginBottom="24dp" />
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="32dp" />
 
-        <!-- Resumen financiero -->
+        <!-- Total Ingresos -->
         <TextView
             android:id="@+id/textTotalIngresos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Total Ingresos: ₡0.00"
-            android:textSize="18sp"
-            android:layout_marginBottom="16dp" />
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="20sp"
+            android:layout_marginBottom="20dp" />
 
+        <!-- Total Gastos -->
         <TextView
             android:id="@+id/textTotalGastos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Total Gastos: ₡0.00"
-            android:textSize="18sp"
-            android:layout_marginBottom="16dp" />
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="20sp"
+            android:layout_marginBottom="20dp" />
 
+        <!-- Balance -->
         <TextView
             android:id="@+id/textBalance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Balance: ₡0.00"
-            android:textSize="20sp"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="22sp"
             android:textStyle="bold"
-            android:layout_marginBottom="24dp" />
+            android:layout_marginBottom="32dp" />
 
-        <!-- Botones de navegación -->
+        <!-- Botón para registrar Ingresos -->
         <Button
             android:id="@+id/btnIngresos"
             android:layout_width="wrap_content"
@@ -53,6 +60,7 @@
             android:text="Registrar Ingresos"
             android:layout_marginBottom="16dp" />
 
+        <!-- Botón para registrar Gastos -->
         <Button
             android:id="@+id/btnGastos"
             android:layout_width="wrap_content"
@@ -60,11 +68,12 @@
             android:text="Registrar Gastos"
             android:layout_marginBottom="16dp" />
 
+        <!-- Botón para Tips Financieros -->
         <Button
             android:id="@+id/btnTips"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tips Financieros"/>
+            android:text="Tips Financieros" />
 
     </LinearLayout>
 </ScrollView>
