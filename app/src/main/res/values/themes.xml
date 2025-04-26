@@ -1,9 +1,17 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.FinanzasFaciles" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-    </style>
+    <!-- Tema claro -->
+    <style name="Theme.FinanzasFaciles" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#673AB7</item> <!-- Morado elegante -->
+        <item name="colorPrimaryVariant">#512DA8</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
 
-    <style name="Theme.FinanzasFaciles" parent="Base.Theme.FinanzasFaciles" />
+        <item name="colorSecondary">#03DAC5</item> <!-- Turquesa bonito -->
+        <item name="colorSecondaryVariant">#018786</item>
+        <item name="colorOnSecondary">#000000</item>
+
+        <item name="android:statusBarColor">#512DA8</item>
+        <item name="android:navigationBarColor">#512DA8</item>
+
+        <item name="android:background">#FAF7FF</item> <!-- Fondo muy suave lilita -->
+    </style>
 </resources>
