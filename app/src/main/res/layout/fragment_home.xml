@@ -52,7 +52,7 @@
             android:textStyle="bold"
             android:layout_marginBottom="32dp" />
 
-        <!-- Botón para ir a Ingresos -->
+        <!-- Botón para registrar Ingresos -->
         <Button
             android:id="@+id/btnIngresos"
             android:layout_width="wrap_content"
@@ -60,7 +60,7 @@
             android:text="Registrar Ingresos"
             android:layout_marginBottom="16dp" />
 
-        <!-- Botón para ir a Gastos -->
+        <!-- Botón para registrar Gastos -->
         <Button
             android:id="@+id/btnGastos"
             android:layout_width="wrap_content"
@@ -68,7 +68,7 @@
             android:text="Registrar Gastos"
             android:layout_marginBottom="16dp" />
 
-        <!-- Botón para ir a Tips -->
+        <!-- Botón para Tips Financieros -->
         <Button
             android:id="@+id/btnTips"
             android:layout_width="wrap_content"
